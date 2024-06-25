@@ -1,4 +1,9 @@
 #this R file will establish a PCA for the Ulithi '23 datasets
+
+#github basics (for terminal)
+#git add -A means to stage everything to be committed
+#git commit -m "message here" means to commit the changes and includes the message
+#git push means to push the commit to the main branch
 rm(list=ls())   #clear the environment
 
 library(dplyr)
