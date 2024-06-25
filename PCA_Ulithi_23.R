@@ -19,10 +19,7 @@ posnorm_ft3 <- as.matrix(posnorm_ft2)   #make it numeric
 
 is.numeric(posnorm_ft3)         #validate that its numeric
 
-corr_ft3 <- cor(posnorm_ft3) #compute the variance of the dataset
-mean(corr_ft3)  #mean variance
-
-PCA <- princomp(posnorm_ft3)    #make the PCA of the dataset
+PCA <- princomp(cor(posnorm_ft3))    #make the PCA of the dataset
 PCA
 
 PCA$loadings
@@ -31,7 +28,8 @@ cor(PC)
 
 
 #making the plot
-ggplot(PC, aes(x = Comp.1, y = Comp.2)) +
-        geom_point()
+p <- ggplot(PC, aes(x = Comp.1, y = Comp.2)) +
+        geom_point() +
+        ggtitle("Gabby's First PCA"); p
 
 
